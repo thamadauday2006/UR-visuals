@@ -248,7 +248,7 @@ function drawSlots(){
 }
 function watch(d){
  if(unsub){unsub();unsub=null}
- slot="";$("hint").textContent="";taken=new Set();
+ slot="";$("hint").textContent="";taken=new Set();drawSlots();
  if(!d){$("hint").textContent="Pick a date to see which slots are free.";drawSlots();return}
  if(fb){
   const{F,db}=fb;
