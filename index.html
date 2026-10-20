@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>UR VISUALS – Reels Shot on iPhone</title>
-<meta name="description" content="Book a professional iPhone reel shoot with UR VISUALS. Pick a date, choose your reels, pay and get confirmed.">
+<meta name="description" content="Professional iPhone reels from ₹999. Pick a plan, choose a date, pay and get confirmed with UR VISUALS.">
 <style>
 :root{--or:#ff6a00;--or2:#ff8c3a;--blk:#0d0d0d;--g1:#161616;--g2:#242424;--g3:#3a3a3a;--g4:#8b8b8b;--g5:#e9e9e9;--g6:#f5f5f5;--wh:#fff;--ok:#22c55e;--er:#ef4444}
 *{box-sizing:border-box}
@@ -72,6 +72,28 @@ h2 span{color:var(--or)}
 .pkg:hover,.pkg.sel{border-color:var(--or);box-shadow:0 8px 24px rgba(255,106,0,.18);transform:translateY(-2px)}
 .pkg b{display:block;font-size:2rem;margin:8px 0 2px}.pkg small{color:#5b5b5b}
 .pkg .off{position:absolute;top:-10px;right:14px;background:var(--or);color:var(--blk);font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:99px}
+.plans{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.plan{cursor:pointer;text-align:left;position:relative;transition:.15s;font:inherit;color:inherit;display:flex;flex-direction:column;gap:4px;width:100%}
+.plan:hover,.plan.sel{border-color:var(--or);box-shadow:0 8px 24px rgba(255,106,0,.18);transform:translateY(-2px)}
+.plan.sel{background:#fff6ee}
+.plan h3{font-size:1.1rem}
+.plan .pr{font-size:2rem;font-weight:800;line-height:1.1;margin-top:6px}
+.plan .pr small{font-size:.85rem;color:#5b5b5b;font-weight:500}
+.plan .more{margin-top:auto;padding-top:12px;color:var(--or);font-weight:700;font-size:.88rem}
+.plan .off{position:absolute;top:-10px;right:14px;background:var(--or);color:var(--blk);font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:99px}
+.need{margin-bottom:6px}
+.reco{margin:14px 0 4px;padding:14px 16px;border-radius:12px;background:var(--blk);color:var(--wh);font-size:.95rem}
+.reco b{color:var(--or)}
+.detail{margin-top:18px;border:1.5px solid var(--or);background:#fff6ee}
+.detail h3{font-size:1.25rem;margin:0 0 4px}
+.detail .pr{font-size:1.5rem;font-weight:800;color:var(--or)}
+.detail ul{list-style:none;padding:0;margin:12px 0}
+.detail li{padding:4px 0}.detail li::before{content:"✓";color:var(--or);font-weight:800;margin-right:10px}
+.detail .best{color:#5b5b5b;font-size:.92rem;margin:0 0 14px}
+.why{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.why .card .ic{font-size:1.6rem;width:48px;height:48px;border-radius:12px;background:var(--blk);display:grid;place-items:center;margin-bottom:12px}
+.banner{margin-top:26px;background:var(--blk);color:var(--wh);border-radius:18px;padding:26px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.banner b{font-size:1.15rem}.banner span{color:var(--g4);display:block;font-size:.93rem;margin-top:2px}
 .book{display:grid;gap:20px;grid-template-columns:1fr}
 @media(min-width:860px){.book{grid-template-columns:1.5fr 1fr}.side{position:sticky;top:84px;align-self:start}}
 .fc h3{margin:26px 0 4px;font-size:1.05rem;display:flex;align-items:center;gap:10px}
@@ -86,6 +108,7 @@ input:focus,select:focus,textarea:focus{outline:0;border-color:var(--or)}
 .chip{border:1.5px solid var(--g5);background:var(--wh);color:var(--blk);padding:11px 14px;border-radius:10px;font:inherit;cursor:pointer}
 .chip.sel{background:var(--blk);color:var(--or);border-color:var(--blk);font-weight:700}
 .chip:disabled{background:var(--g6);color:var(--g4);text-decoration:line-through;cursor:not-allowed}
+.chip.sel:disabled{background:var(--blk);color:var(--or);text-decoration:none;cursor:default}
 .hint{font-size:.84rem;color:#5b5b5b;min-height:1.2em;margin-top:8px}
 .live{display:inline-flex;align-items:center;gap:7px;font-size:.78rem;color:#5b5b5b;margin-left:auto;font-weight:500}
 .cnt{display:flex;align-items:center;gap:18px}
@@ -114,16 +137,16 @@ footer b{color:var(--wh);letter-spacing:.14em}footer em{font-style:normal;color:
 <body>
 <header><div class="w">
  <a class="logo" href="#"><i>UR</i>VISUALS</a>
- <nav><a class="l" href="#work">Our work</a><a class="l" href="#how">How it works</a><a class="l" href="#pricing">Pricing</a><a class="btn" href="#book" style="padding:9px 18px">Book now</a></nav>
+ <nav><a class="l" href="#work">Our work</a><a class="l" href="#how">How it works</a><a class="l" href="#pricing">Plans</a><a class="l" href="#why">Why us</a><a class="btn" href="#book" style="padding:9px 18px">Book now</a></nav>
 </div></header>
 
 <div class="hero"><div class="w">
  <div>
   <span class="tag"><span class="dot"></span><span id="mode">Live availability</span></span>
   <h1>Reels that stop the scroll. <em>Shot on iPhone.</em></h1>
-  <p>UR VISUALS shoots, edits and delivers Instagram reels for your brand, product or event. Book your date in under two minutes.</p>
+  <p>UR VISUALS shoots, edits and delivers Instagram reels for your brand, product or event. Pick a plan and book your date in under two minutes.</p>
   <div class="cta"><a class="btn" href="#book">Book your shoot</a><a class="btn ghost" href="#work">Watch our work</a></div>
-  <div class="stats"><div><b>₹999</b><span>per reel</span></div><div><b>10% off</b><span>on 5+ reels</span></div><div><b>24 hrs</b><span>typical delivery</span></div></div>
+  <div class="stats"><div><b>₹999</b><span>reels start at</span></div><div><b>4 plans</b><span>for every need</span></div><div><b>Quick</b><span>delivery</span></div></div>
  </div>
  <div class="phone"><div class="screen"><div class="rail"><span>♥</span><span>💬</span><span>➤</span></div><small>@yourbrand</small><b>Your next viral reel</b></div></div>
 </div></div>
@@ -145,19 +168,33 @@ footer b{color:var(--wh);letter-spacing:.14em}footer em{font-style:normal;color:
  <div class="grid">
   <div class="card"><div class="num">1</div><h3>Your details</h3><p>Tell us your name, phone and email.</p></div>
   <div class="card"><div class="num">2</div><h3>Date &amp; location</h3><p>Pick a day and a free slot. Taken slots update live.</p></div>
-  <div class="card"><div class="num">3</div><h3>Choose reels</h3><p>Select how many videos you need and pay.</p></div>
+  <div class="card"><div class="num">3</div><h3>Choose your plan</h3><p>Pick the plan that fits your shoot and pay.</p></div>
   <div class="card"><div class="num">4</div><h3>Get confirmed</h3><p>Receive your booking on WhatsApp or email.</p></div>
  </div></div></section>
 
 <section id="pricing"><div class="w">
- <h2>Simple <span>pricing</span></h2><p class="lead">₹999 per reel. Tap a pack to select it.</p>
- <div class="grid">
-  <button class="card pkg" data-n="1"><h3>Single</h3><b>₹999</b><small>1 reel</small></button>
-  <button class="card pkg" data-n="5"><span class="off">SAVE 10%</span><h3>Starter pack</h3><b>₹4000</b><small>5 reels</small></button>
-  <button class="card pkg" data-n="10"><span class="off">SAVE 10%</span><h3>Brand pack</h3><b>₹8000</b><small>10 reels</small></button>
- </div></div></section>
+ <h2>Pick your <span>plan</span></h2><p class="lead">Not sure which one fits? Tell us what you are shooting and we will point you to the right plan.</p>
+ <label style="margin-top:0">What are you shooting?</label>
+ <div class="chips need" id="need"></div>
+ <div class="reco hide" id="reco" aria-live="polite"></div>
+ <div class="grid plans" id="plans" style="margin-top:22px"></div>
+ <div class="card detail hide" id="detail" aria-live="polite"></div>
+</div></section>
 
-<section id="book" class="alt"><div class="w">
+<section id="why" class="alt"><div class="w">
+ <h2>Why <span>UR VISUALS</span></h2><p class="lead">Studio-quality reels without the studio price.</p>
+ <div class="why">
+  <div class="card"><div class="ic">📱</div><h3>Shot on the latest iPhone</h3><p>Sharp, cinematic vertical video made for Instagram, Reels and Shorts, with none of the bulky-camera fuss.</p></div>
+  <div class="card"><div class="ic">💰</div><h3>Better price than the market</h3><p>Professional reels from just ₹999. Clear, upfront pricing, so you always know what you pay.</p></div>
+  <div class="card"><div class="ic">⚡</div><h3>Fast delivery</h3><p>Quick turnaround on every plan, and on-site reel delivery with the Half-Day Shoot.</p></div>
+  <div class="card"><div class="ic">✂️</div><h3>Professionally edited</h3><p>Every reel is edited for social: tight cuts, clean colours and the right pace to keep people watching.</p></div>
+  <div class="card"><div class="ic">📅</div><h3>Easy live booking</h3><p>See free dates and slots in real time and book in under two minutes. No calls, no waiting.</p></div>
+  <div class="card"><div class="ic">🎬</div><h3>One hour to a full day</h3><p>From a quick product reel to complete wedding coverage, there is a plan that fits your event and budget.</p></div>
+ </div>
+ <div class="banner"><div><b>Ready to make your content stand out?</b><span>Pick a plan and lock in your date today.</span></div><a class="btn" href="#pricing">See plans</a></div>
+</div></section>
+
+<section id="book"><div class="w">
  <h2>Book your <span>shoot</span></h2><p class="lead">Fill in the details. Your amount updates as you choose.</p>
  <div class="book">
   <div class="card fc" id="formCard">
@@ -172,8 +209,11 @@ footer b{color:var(--wh);letter-spacing:.14em}footer em{font-style:normal;color:
    <div class="hint" id="hint">Pick a date to see which slots are free.</div>
    <label for="loc">Location / address</label><textarea id="loc" rows="2" placeholder="Venue, area, city"></textarea>
 
-   <h3><i>3</i>Number of reels</h3>
-   <div class="cnt"><button type="button" id="minus" aria-label="Fewer reels">−</button><b id="n">1</b><button type="button" id="plus" aria-label="More reels">+</button></div>
+   <h3><i>3</i>Your plan</h3>
+   <label for="planSel">Plan</label><select id="planSel"></select>
+   <div class="hint" id="planInc"></div>
+   <label>Extra edited reels (optional) · <span id="xPrice"></span> each</label>
+   <div class="cnt"><button type="button" id="minus" aria-label="Fewer extra reels">−</button><b id="n">0</b><button type="button" id="plus" aria-label="More extra reels">+</button></div>
    <label for="note">Notes (optional)</label><textarea id="note" rows="2" placeholder="Theme, product, music style…"></textarea>
 
    <h3><i>4</i>Payment</h3>
@@ -187,10 +227,10 @@ footer b{color:var(--wh);letter-spacing:.14em}footer em{font-style:normal;color:
 
   <div class="side">
    <div class="card dark" id="sumCard"><h3 style="margin:0 0 8px">Order summary</h3>
-    <div class="sum"><div><span>Reels × <span id="q">1</span></span><span id="sub"></span></div>
-    <div><span>Discount</span><span id="dis"></span></div>
+    <div class="sum"><div><span id="sPlan"></span><span id="sBase"></span></div>
+    <div id="xRow"><span>Extra reels × <span id="q">0</span></span><span id="sub"></span></div>
     <div class="tot"><span>Amount</span><span id="amt"></span></div></div>
-    <small>Updates instantly as you change reels.</small></div>
+    <small id="sInc"></small></div>
    <div class="card dark hide" id="done"><div class="tick">✓</div><h3 style="text-align:center;margin:0 0 8px">Booking confirmed!</h3>
     <div class="sum" id="final"></div>
     <div class="act"><a class="btn" id="wa" target="_blank" rel="noopener">Send on WhatsApp</a>
@@ -201,12 +241,37 @@ footer b{color:var(--wh);letter-spacing:.14em}footer em{font-style:normal;color:
 <footer><div class="w"><b>UR <em>VISUALS</em></b><br>Reels shot on iPhone · Book now, shoot soon</div></footer>
 
 <script type="module">
-const RATE=999, OWNER_WA="916304964047";           // put your WhatsApp number (country code, no +)
-const FIREBASE_CONFIG={apiKey:"AIzaSyB44Ux7h6Dw_4tbGduXxXhYec04O4nXrQg",authDomain:"ur-visuals.firebaseapp.com",projectId:"ur-visuals",storageBucket:"ur-visuals.firebasestorage.app",messagingSenderId:"691493632830",appId:"1:691493632830:web:afd4d16d8b57df4e96ca6f"};                          // paste your Firebase web config here to turn on live shared slots
+const EXTRA=999, OWNER_WA="919999999999";           // put your WhatsApp number (country code, no +)
+const FIREBASE_CONFIG={apiKey:"AIzaSyB44Ux7h6Dw_4tbGduXxXhYec04O4nXrQg",authDomain:"ur-visuals.firebaseapp.com",projectId:"ur-visuals",storageBucket:"ur-visuals.firebasestorage.app",messagingSenderId:"691493632830",appId:"1:691493632830:web:afd4d16d8b57df4e96ca6f"};                           // paste your Firebase web config here to turn on live shared slots
 const SLOTS=["Morning (9–12)","Afternoon (12–4)","Evening (4–7)"];
 const $=id=>document.getElementById(id);
 const inr=v=>"₹"+v.toLocaleString("en-IN");
-let reels=1, slot="", taken=new Set(), unsub=null, fb=null;
+/* ===== PLANS: edit prices and wording here ===== */
+const PLANS=[
+ {id:"quick",name:"Quick Reel",price:999,unit:"/ shoot",reels:1,
+  short:"Perfect for creators, personal brands and anyone who wants a high-quality reel for social media.",
+  feats:["Up to 1 hour of shooting","1 professionally edited reel","Quick delivery","Shot on the latest iPhone"],
+  best:"Best for: Instagram reels, personal videos and product highlights."},
+ {id:"half",name:"Half-Day Shoot",price:1500,unit:"/ shoot",reels:2,badge:"BEST VALUE",
+  short:"Capture more moments with a longer shoot and multiple ready-to-post videos.",
+  feats:["Up to 3 hours of shooting","2 professionally edited reels","Quick on-site reel delivery"],
+  best:"Best for: shops, boutiques, cafes and short events. Works out to just ₹750 per reel."},
+ {id:"biz",name:"Business Content Pack",price:8000,unit:"/ package",reels:10,
+  short:"Keep your business active online with a collection of engaging videos created for your social media pages.",
+  feats:["10 professionally edited videos","Content planned across 2 weeks","Product, service and promotional videos","Consistent content for Instagram and other social platforms"],
+  best:"Best for: businesses that want to post regularly without the stress. Works out to ₹800 per video."},
+ {id:"wed",name:"Wedding & Event Coverage",price:5000,unit:"/ day",reels:3,full:true,
+  short:"Relive your special day through beautifully captured moments and short, shareable videos.",
+  feats:["Morning-to-night event coverage","3 professionally edited reels","Candid moments and event highlights","Social-media-ready vertical videos"],
+  best:"Best for: small weddings, engagements, birthdays and family functions."}
+];
+const NEEDS=[
+ {t:"A reel for myself or a product",p:"quick",say:"One polished reel, shot and edited fast. The Quick Reel is the perfect starting point."},
+ {t:"A shop, boutique or café shoot",p:"half",say:"You will want more than one clip. The Half-Day Shoot gives you 3 hours and 2 reels, at the best price per reel."},
+ {t:"Regular posting for my business",p:"biz",say:"Stay active online all month. The Business Content Pack gives you 10 edited videos planned across 2 weeks."},
+ {t:"Wedding, birthday or function",p:"wed",say:"Do not miss a moment. Wedding & Event Coverage stays with you from morning to night and delivers 3 shareable reels."}
+];
+let planId="quick", extra=0, slot="", taken=new Set(), unsub=null, fb=null;
 
 if(FIREBASE_CONFIG){
  try{
@@ -222,18 +287,70 @@ const lsSet=a=>{try{localStorage.setItem("urv_slots",JSON.stringify(a))}catch(e)
 
 $("date").min=new Date().toISOString().split("T")[0];
 
-function calc(){const s=reels*RATE,d=reels>=5?Math.round(s*.1):0;return{s,d,t:s-d}}
-function paint(){const c=calc();
- $("n").textContent=reels;$("q").textContent=reels;$("sub").textContent=inr(c.s);$("dis").textContent="−"+inr(c.d);$("amt").textContent=inr(c.t);
- document.querySelectorAll(".pkg").forEach(p=>p.classList.toggle("sel",+p.dataset.n===reels));
+const curPlan=()=>PLANS.find(p=>p.id===planId);
+function calc(){const P=curPlan(),s=extra*EXTRA;return{base:P.price,s,t:P.price+s}}
+function paint(){const c=calc(),P=curPlan();
+ $("n").textContent=extra;$("q").textContent=extra;$("sub").textContent=inr(c.s);$("amt").textContent=inr(c.t);
+ $("sPlan").textContent=P.name;$("sBase").textContent=inr(c.base);
+ $("xRow").classList.toggle("hide",extra===0);
+ $("sInc").textContent=P.reels+" edited reel"+(P.reels>1?"s":"")+" included"+(extra?" + "+extra+" extra":"")+". Updates instantly.";
+ $("planInc").textContent=P.short;
+ $("planSel").value=planId;
+ document.querySelectorAll(".plan").forEach(p=>p.classList.toggle("sel",p.dataset.id===planId));
 }
-$("minus").onclick=()=>{reels=Math.max(1,reels-1);paint()};
-$("plus").onclick=()=>{reels=Math.min(30,reels+1);paint()};
-document.querySelectorAll(".pkg").forEach(p=>p.onclick=()=>{reels=+p.dataset.n;paint();$("book").scrollIntoView()});
+function setPlan(id){
+ planId=id;$("hint").textContent="";paint();drawSlots();showDetail();
+}
+function showDetail(){
+ const P=curPlan(),d=$("detail");d.innerHTML="";
+ const h=document.createElement("h3");h.textContent=P.name;
+ const pr=document.createElement("div");pr.className="pr";pr.textContent=inr(P.price)+" "+P.unit;
+ const p=document.createElement("p");p.textContent=P.short;p.style.margin="8px 0 0";
+ const ul=document.createElement("ul");P.feats.forEach(f=>{const li=document.createElement("li");li.textContent=f;ul.appendChild(li)});
+ const best=document.createElement("p");best.className="best";best.textContent=P.best;
+ const go=document.createElement("a");go.className="btn";go.href="#book";go.textContent="Book "+P.name;
+ d.append(h,pr,p,ul,best,go);d.classList.remove("hide");
+}
+function drawPlans(){
+ const g=$("plans");g.innerHTML="";
+ PLANS.forEach(P=>{
+  const b=document.createElement("button");b.type="button";b.className="card plan";b.dataset.id=P.id;
+  if(P.badge){const o=document.createElement("span");o.className="off";o.textContent=P.badge;b.appendChild(o)}
+  const h=document.createElement("h3");h.textContent=P.name;
+  const pr=document.createElement("div");pr.className="pr";pr.textContent=inr(P.price)+" ";
+  const u=document.createElement("small");u.textContent=P.unit;pr.appendChild(u);
+  const t=document.createElement("p");t.textContent=P.short;
+  const m=document.createElement("span");m.className="more";m.textContent="See what's included →";
+  b.append(h,pr,t,m);b.onclick=()=>{$("need").querySelectorAll(".chip").forEach(c=>c.classList.remove("sel"));$("reco").classList.add("hide");setPlan(P.id)};g.appendChild(b);
+  const o=document.createElement("option");o.value=P.id;o.textContent=P.name+" · "+inr(P.price);$("planSel").appendChild(o);
+ });
+ const n=$("need");
+ NEEDS.forEach(N=>{
+  const b=document.createElement("button");b.type="button";b.className="chip";b.textContent=N.t;
+  b.onclick=()=>{
+   n.querySelectorAll(".chip").forEach(c=>c.classList.toggle("sel",c===b));
+   const r=$("reco");r.classList.remove("hide");r.innerHTML="";
+   const s=document.createElement("b");s.textContent="Your perfect plan: "+PLANS.find(p=>p.id===N.p).name+". ";
+   r.append(s,document.createTextNode(N.say));
+   setPlan(N.p);
+  };
+  n.appendChild(b);
+ });
+}
+$("planSel").onchange=e=>setPlan(e.target.value);
+$("xPrice").textContent=inr(EXTRA);
+$("minus").onclick=()=>{extra=Math.max(0,extra-1);paint()};
+$("plus").onclick=()=>{extra=Math.min(20,extra+1);paint()};
 document.querySelectorAll(".opt input").forEach(r=>r.onchange=()=>document.querySelectorAll(".opt").forEach(o=>o.classList.toggle("sel",o.querySelector("input").checked)));
 
 function drawSlots(){
  const hasDate=!!$("date").value;
+ if(curPlan().full){
+  $("slots").innerHTML="";
+  SLOTS.forEach(t=>{const b=document.createElement("button");b.type="button";b.className="chip"+(hasDate&&!taken.size?" sel":"");b.disabled=true;b.textContent=t;$("slots").appendChild(b)});
+  $("hint").textContent=!hasDate?"Pick a date. Wedding & Event coverage reserves the whole day.":taken.size?"This date already has a booking, so full-day coverage is not available. Please pick another day.":"Full day reserved, from morning to night.";
+  return;
+ }
  if(slot!==""&&taken.has(slot)){slot="";$("hint").textContent="That slot was just booked by someone else. Please pick another."}
  $("slots").innerHTML="";
  SLOTS.forEach((t,i)=>{
@@ -244,11 +361,12 @@ function drawSlots(){
   b.onclick=()=>{slot=i;$("hint").textContent="";drawSlots()};
   $("slots").appendChild(b);
  });
+ if(!hasDate&&!$("hint").textContent)$("hint").textContent="Pick a date to see which slots are free.";
  if(hasDate&&slot===""&&!$("hint").textContent)$("hint").textContent=taken.size>=SLOTS.length?"This date is fully booked. Try another day.":"Choose a free slot.";
 }
 function watch(d){
  if(unsub){unsub();unsub=null}
- slot="";$("hint").textContent="";taken=new Set();drawSlots();
+ slot="";$("hint").textContent="";taken=new Set();
  if(!d){$("hint").textContent="Pick a date to see which slots are free.";drawSlots();return}
  if(fb){
   const{F,db}=fb;
@@ -268,31 +386,34 @@ async function submitB(){
  if(p.length<10)return E.textContent="Enter a valid 10-digit WhatsApp number.";
  if(!/^\S+@\S+\.\S+$/.test(e))return E.textContent="Enter a valid email.";
  if(!d)return E.textContent="Pick a shoot date.";
- if(slot==="")return E.textContent="Choose a time slot.";
+ const P=curPlan();
+ if(!P.full&&slot==="")return E.textContent="Choose a time slot.";
+ if(P.full&&taken.size)return E.textContent="That date already has a booking. Full-day coverage needs a free day.";
  if($("loc").value.trim().length<5)return E.textContent="Enter the shoot location.";
  E.textContent="";
- const B={name:n,phone:p.slice(-10),email:e,date:d,slotIdx:slot,slot:SLOTS[slot],loc:$("loc").value.trim(),reels,amt:calc().t,note:$("note").value.trim(),
+ const B={name:n,phone:p.slice(-10),email:e,date:d,slotIdx:P.full?"all":slot,slot:P.full?"Full day":SLOTS[slot],loc:$("loc").value.trim(),planId:P.id,plan:P.name,extraReels:extra,reels:P.reels+extra,amt:calc().t,note:$("note").value.trim(),
   pm:document.querySelector("input[name=pm]:checked").value,id:"UV"+Date.now().toString().slice(-6)};
  const btn=$("go");btn.disabled=true;btn.textContent="Confirming…";
  try{
   if(fb){
    const{F,db}=fb,batch=F.writeBatch(db);
-   batch.set(F.doc(db,"slots",d+"_"+slot),{date:d,i:slot});
+   (P.full?[0,1,2]:[slot]).forEach(i=>batch.set(F.doc(db,"slots",d+"_"+i),{date:d,i}));
    batch.set(F.doc(F.collection(db,"bookings")),{...B,created:F.serverTimestamp()});
    await batch.commit();
   }else{
    const a=lsGet();
-   if(a.some(x=>x.d===d&&x.i===slot))throw new Error("taken");
-   a.push({d,i:slot});lsSet(a);
+   const ids=P.full?[0,1,2]:[slot];
+   if(a.some(x=>x.d===d&&ids.includes(x.i)))throw new Error("taken");
+   ids.forEach(i=>a.push({d,i}));lsSet(a);
   }
  }catch(err){
   console.error(err);btn.disabled=false;btn.textContent="Pay & confirm booking";
   E.textContent="Sorry, that slot was just taken. Please choose another.";return;
  }
- const rows=[["Booking ID",B.id],["Name",B.name],["Date",B.date+" · "+B.slot],["Location",B.loc],["Reels",B.reels],["Amount",inr(B.amt)],["Payment",B.pm+(B.pm==="Pay at shoot"?" (due)":" (demo paid)")]];
+ const rows=[["Booking ID",B.id],["Name",B.name],["Plan",B.plan],["Date",B.date+" · "+B.slot],["Location",B.loc],["Reels",B.reels+(B.extraReels?" ("+B.extraReels+" extra)":"")],["Amount",inr(B.amt)],["Payment",B.pm+(B.pm==="Pay at shoot"?" (due)":" (demo paid)")]];
  $("final").innerHTML="";
  rows.forEach(r=>{const d=document.createElement("div"),a=document.createElement("span"),b=document.createElement("span");a.textContent=r[0];b.textContent=r[1];d.append(a,b);$("final").appendChild(d)});
- const m="UR VISUALS booking "+B.id+"\nName: "+B.name+"\nPhone: "+B.phone+"\nDate: "+B.date+" ("+B.slot+")\nLocation: "+B.loc+"\nReels: "+B.reels+"\nAmount: "+inr(B.amt)+"\nPayment: "+B.pm+(B.note?"\nNotes: "+B.note:"");
+ const m="UR VISUALS booking "+B.id+"\nName: "+B.name+"\nPhone: "+B.phone+"\nDate: "+B.date+" ("+B.slot+")\nLocation: "+B.loc+"\nPlan: "+B.plan+"\nReels: "+B.reels+"\nAmount: "+inr(B.amt)+"\nPayment: "+B.pm+(B.note?"\nNotes: "+B.note:"");
  $("wa").href="https://wa.me/"+OWNER_WA+"?text="+encodeURIComponent(m);
  $("mail").href="mailto:"+encodeURIComponent(B.email)+"?subject="+encodeURIComponent("Booking confirmed – "+B.id)+"&body="+encodeURIComponent(m);
  $("sumCard").classList.add("hide");$("done").classList.remove("hide");$("book").scrollIntoView();
@@ -309,8 +430,7 @@ $("go").onclick=submitB;
    To add a new category, add its name to CATS. */
 const CATS=["Boutique","Wedding Shoots","Festivals","Events"];
 const WORK=[
-{cat:"Ganesh Nimarjanam",title:"Ganesh Nimarjanam reel 1",type:"youtube",id:"gfzKT9_aLJM"},
- {cat:"Ganesh Nimarjanam",title:"Ganesh Nimarjanam reel 2",type:"youtube",id:"3KhKtRXS4Uw"},
+ {cat:"Boutique",title:"Boutique reel 1",type:"youtube",id:""},
  {cat:"Boutique",title:"Boutique reel 2",type:"youtube",id:""},
  {cat:"Wedding Shoots",title:"Wedding highlight 1",type:"youtube",id:""},
  {cat:"Wedding Shoots",title:"Wedding highlight 2",type:"youtube",id:""},
@@ -375,7 +495,7 @@ $("mx").onclick=closeV;
 $("modal").addEventListener("click",e=>{if(e.target===$("modal"))closeV()});
 addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("modal").classList.contains("hide"))closeV()});
 
-paint();drawSlots();drawWork();
+drawPlans();paint();drawSlots();drawWork();
 </script>
 </body>
 </html>
